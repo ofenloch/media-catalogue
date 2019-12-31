@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+// for debugging:
+// require('dotenv').config({ debug: process.env.DEBUG });
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
