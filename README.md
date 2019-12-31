@@ -1,6 +1,6 @@
 # MediaCatalogue - An Express App
 
-## Set Up
+## Set Up The App's Skeleton
 
 ```bash
 obama@teben:~/workspaces/nodejs$ express --view=pug media-catalogue
@@ -57,3 +57,49 @@ obama@teben:~/workspaces/nodejs/media-catalogue$
 ```
 
 Run `npm install` in the app's root directory. If recommended run `npm audit fix`
+
+## Make the App aware of Code Changes by Demonizing it with *nodemon*
+
+Run `npm install --save-dev nodemon` to install **nodemon** globally. Check if *package.json* contains this entry
+
+```json
+        "devDependencies": {
+            "nodemon": "^1.19.1"
+        }
+```
+
+If not add it your *package.json* below *"dependencies": {...}*. Additionally, we have to add an entry for starting the 
+app in developemt mode below th "start" entry:
+
+```json
+        "devstart": "nodemon ./bin/www"
+```
+
+Now we can start the app with `npm run devstart` - or with `export PORT=9090 ; DEBUG=server:* & npm run devstart`.
+
+Whe the server is running and we change some code, there will be a message like this
+
+```code
+      [nodemon] restarting due to changes...
+```
+
+## Use *dotenv* for Configuration
+
+* Run `npm install --save dotenv` to install **dotenv**. 
+* Add `require('dotenv').config();` at the beginning of file .app.js*
+* Create a file *.env* in the app's root directory and configuration data.
+* Do NOT commit the file *.env* since it may contain sensitive data (e.g. passwords).
+* Add *.env* to *.gitignore*
+
+Example for *.env*:
+
+```config
+    DB_CONNECTION_LIMIT=10
+    DB_HOST=fake.host.com
+    DB_USER=ItsNotARealUser
+    DB_PASSWORD=ThisIsAFakePassWord
+    DB_NAME=ItsJustAnExample
+    DB_DEBUG=false
+    PRIMARY_LANGUAGE=de-de
+    DEFAULTPORT=5588
+```
