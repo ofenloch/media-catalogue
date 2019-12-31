@@ -88,7 +88,7 @@ Whe the server is running and we change some code, there will be a message like 
 * Run `npm install --save dotenv` to install **dotenv**. 
 * Add `require('dotenv').config();` at the beginning of file .app.js*
 * Create a file *.env* in the app's root directory and configuration data.
-* Do NOT commit the file *.env* since it may contain sensitive data (e.g. passwords).
+* **Do NOT commit the file .env** since it may contain sensitive data (e.g. passwords)!
 * Add *.env* to *.gitignore*
 
 Example for *.env*:
@@ -103,3 +103,4 @@ Example for *.env*:
     PRIMARY_LANGUAGE=de-de
     DEFAULTPORT=5588
 ```
+You can use 'password: process.env.DB_PASSWORD' to confiugre stuff. See *mysql.service.js* for an example.
