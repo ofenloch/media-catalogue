@@ -3,3 +3,35 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  p  This server was created with 
+    a(href='https://nodejs.org/') NodeJS 
+    | and 
+    a(href='https://expressjs.com') Express
+    |.
+
+  p
+    img(src='/images/nodejs-new-pantone-black.svg' alt='images/nodejs-new-pantone-black.svg' width='100px')
+    img(src='/images/express-logo.png' alt='images/node-express.png' width='100px')
+
+
+  p Get a list of all media files: 
+    a(href='/media/') /media
+
+  h2 Left Overs From the Tutorial
+
+  p Also check out the 
+    a(href='https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs#Guides' target='blank') Express Guides at MDN.
+  
+  p This is a link to a static html page in directory ./public/: 
+   a(href='/hello.html') /hello.html
+
+  p See how cool the users are:
+    a(href='/users/cool') /users/cool
+
+  p Get data of user with index 4: 
+    a(href='/users/4') /users/4
+
+  p Get a list of all users: 
+    a(href='/users/') /users
+
