@@ -36,11 +36,6 @@ obama@teben:~/workspaces/nodejs$ cd media-catalogue/
 obama@teben:~/workspaces/nodejs/media-catalogue$ git init
 Initialized empty Git repository in /data/sdb1/home/obama/workspaces/nodejs/media-catalogue/.git/
 obama@teben:~/workspaces/nodejs/media-catalogue$ git add .
-obama@teben:~/workspaces/nodejs/media-catalogue$ git aommit -a -m"initial check in"
-git: 'aommit' is not a git command. See 'git --help'.
-
-The most similar command is
-        commit
 obama@teben:~/workspaces/nodejs/media-catalogue$ git commit -a -m"initial check in"
 [master (root-commit) d5af6fc] initial check in
  9 files changed, 191 insertions(+)
