@@ -6,7 +6,7 @@ var db = require('../mysql/mysql.service');
 /**
  * default limit for db queries
  */
-var limit = 0;
+var limit = 10;
 /**
  * the routes' order is first come first serve
  */
